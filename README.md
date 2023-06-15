@@ -1,5 +1,7 @@
 # SVG Maker
-  
+
+  ## Walkthrough Video
+  https://drive.google.com/file/d/1RD03YVtLgNAQvXdzZH6jXeS5q5zAYYOw/view
   
   ## Description
     A simple CLI to create logos. 
