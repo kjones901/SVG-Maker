@@ -1,8 +1,17 @@
 const { prompt } = require("inquirer");
-const { writeFile } = require("fs/promises");
+const fs = require("fs");
+const generateSVG = require("./lib/generate");
+const questions = require('./lib/questions')
+
+function writeToFile(input) {
+    fs.writeFile("./dist/logo.svg", generateSVG(input), (err) => 
+    err ? console.log(err) : console.log("SVG Created")
+    );
+}
 
 async function init() {
-    generateSVG();
+    const answers = await prompt(questions)
+    writeToFile(answers);
 }
 
 init();
